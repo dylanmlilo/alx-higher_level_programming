@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import add_0
+from add_0 import add
 a = 1
 b = 2
-ans = add_0.add(a, b)
-print("{} + {} = {}".format(a, b, ans))
+if __name__ == '__main__':
+    ans = add(a, b)
+    print("{} + {} = {}".format(a, b, ans))
