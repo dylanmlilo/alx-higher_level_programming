@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""Defines square module"""
 
 
 class Square:
 	def __init__(self, size=0):
+		"""Square class"""
 		if type(size) != int:
 			raise TypeError("size must be an integer")
 		elif size < 0:
