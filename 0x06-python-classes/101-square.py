@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""Define square module"""\
+"""Define square module"""
 
 
 class Square():
