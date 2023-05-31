@@ -1,24 +1,25 @@
-#!/usr/bin/python
-"""Define Square. Module"""
+#!/usr/bin/python3
+"""Define a Square module"""
 
 
 class Square:
     """Square class"""
 
     def __init__(self, size=0):
-        """Initialisinge a new square.
+        """Initialising a new square
+        Args:
+            size (int): size of the new square.
         """
         self.size = size
 
     @property
     def size(self):
-        """get the size of the square."""
+        """get the size of the square"""
         return (self.__size)
 
     @size.setter
     def size(self, value):
-        """get the size ofthe square"""
-
+        """set the size of the square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -26,29 +27,29 @@ class Square:
         self.__size = value
 
     def area(self):
-        """compute the area of the square."""
+        """Computes the area of the square"""
         return (self.__size ** 2)
 
-    def __lt__(self, val):
-        """less than check"""
-        return self.area() < val.area()
+    def __eq__(self, content):
+        """Define the == comparision"""
+        return self.area() == content.area()
 
-    def __le__(self, val):
-        """less than equal to check"""
-        return self.area() <= val.area()
+    def __ne__(self, content):
+        """Define the != comparison"""
+        return self.area() != content.area()
 
-    def __eq__(self, val):
-        """equal to check"""
-        return self.area() == val.area()
+    def __lt__(self, content):
+        """Define the < comparison"""
+        return self.area() < content.area()
 
-    def __ne__(self, val):
-        """not equal to check"""
-        return self.area() != val.area()
+    def __le__(self, content):
+        """Define the <= comparison"""
+        return self.area() <= content.area()
 
-    def __gt__(self, val):
-        """greater than check"""
-        return self.area() > val.area()
+    def __gt__(self, content):
+        """Define the > comparison"""
+        return self.area() > content.area()
 
-    def __ge__(self, val):
-        """greater than or equal to check"""
-        return self
+    def __ge__(self, content):
+        """Define the >= compmarison"""
+        return self.area() >= content.area()
