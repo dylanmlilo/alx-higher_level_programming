@@ -1,0 +1,99 @@
+========================================================================
+'Test for `0-add_integer` module'
+========================================================================
+'Funtion to test:   add_integer()'
+========================================================================
+
+
+Import function from module
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Checking for addition of positive integers
+>>> add_integer(9, 7)
+16
+>>> add_integer(5, 4)
+9
+
+Checking for addition of negative integers
+>>> add_integer(-7, -5)
+-12
+>>> add_integer(-3, -4)
+-7
+
+Checking for addition of negative and positive integers
+>>> add_integer(-2, 7)
+5
+>>> add_integer(-6, 3)
+-3
+
+Checking for addition of positive floats
+>>> add_integer(4.4, 5.2)
+9
+>>> add_integer(9.3, 9.2)
+18
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: float overflow
+
+Checking for addition of negative floats
+>>> add_integer(-4.2, -7.6)
+-11
+>>> add_integer(-2.5, -6.3)
+-8
+>>> add_integer(float('-inf'))
+Traceback (most recent call last):
+...
+OverflowError: float overflow
+
+Checking for addition of integer and a float
+>>> add_integer(4, 8.6)
+12
+>>> add_integer(5.7, 2)
+7
+
+Checking for addition of positive float and negative float
+>>> add_integer(9.4, -5.3)
+4
+>>> add_integer(-10.6, 5.4)
+-5
+
+Checking for addition of positive int, and string
+>>> add_integer(7, "str")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("str", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Checking for addition of list, and int
+>>> add_integer([4, 8], 6)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Checking for addition of string, and list
+>>> add_integer("python", [3, 7])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Checking for a addition of None, and int
+>>> add_integer(None, 7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Checking for addition of int, and None
+>>> add_integer(3, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Checking for addition of None, and None
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
