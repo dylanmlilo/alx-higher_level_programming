@@ -3,14 +3,11 @@
 
 
 def add_integer(a, b=98):
-    """"
-    computes the sum of two numbers
-
+    """" Computes the sum of two numbers
     Args:
         a: (int) first number
         b: (int) second number
         floats are casted to integers
-
     Raises:
         TypeError: of a or b is not an integer or float
 
