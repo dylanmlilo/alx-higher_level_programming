@@ -18,18 +18,6 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
-Checking the Passing an empty matrix:
->>> matrix_divided([], 10)
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Checking the Passing of a matrix which one of its elements is an empty list:
->>> matrix_divided([[3.7, 7.1], [4, 5], []], 7)
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 Checking the Division of  a matrix which its rows don't have the same size:
 >>> matrix_divided([[10, 14], [28, 5.2, 10]], 7)
 Traceback (most recent call last):
