@@ -3,40 +3,42 @@ Test for 1-my_list module
 =====================================================================
 
 importing the class and method:
-    >>> MyList = __import__("1-my_list").MyList
+>>> MyList = __import__("1-my_list").MyList
 
 Check for creation of MyList instance:
-    >>> my_list = MyList()
+>>> my_list = MyList()
 
 Check for appending list items:
 
-    >>> my_list = MyList(7)
-    >>> my_list.append(2)
-    >>> my_list.append(4)
-    >>> my_list.append(5)
-    >>> my_list.append(7)
-    >>> my_list.append()
-    >>> print(my_list)
-    [7, 2, 4, 5, 7]
+>>> my_list = MyList()
+>>> my_list = MyList(7)
+>>> my_list.append(2)
+>>> my_list.append(4)
+>>> my_list.append(5)
+>>> my_list.append(7)
+>>> my_list.append(3)
+>>> print(my_list)
+[7, 2, 4, 5, 7, 3]
 
 Checking for appending negative numbers:
 
-    >>> my_list = MyList(-7)
-    >>> my_list.append(-2)
-    >>> my_list.append(-4)
-    >>> my_list.append(-5)
-    >>> my_list.append(-7)
-    >>> my_list.append()
-    >>> print(my_list)
-    [-7, -2, -4, -5, -7] 
+>>> my_list = MyList()
+>>> my_list = MyList(-7)
+>>> my_list.append(-2)
+>>> my_list.append(-4)
+>>> my_list.append(-5)
+>>> my_list.append(-7)
+>>> my_list.append(-3)
+>>> print(my_list)
+[-7, -2, -4, -5, -7, -3] 
 
 Checking for non-integers list item:
 
-    >>> my_list = MyList()
-    >>> my_list.append("r")
-    >>> my_list.append("K")
-    >>> my_list.append("V")
-    >>> my_list.print_sorted()
-    Traceback (most recent call last):
-        ...
-    TypeError: must be a list of integers
+>>> my_list = MyList()
+>>> my_list.append("r")
+>>> my_list.append("K")
+>>> my_list.append("V")
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: must be a list of integers
